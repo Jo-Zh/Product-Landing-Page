@@ -1,0 +1,191 @@
+/* custimized setting for the whole style*/
+:root {
+    --my-txt-color: #953f0c;
+    --my-bg-color: rgba(227, 76, 240, 0.4);
+}
+
+a:hover {
+    background: rgb(255, 217, 0, 0.5);
+}
+
+a:link {
+    color: gold;
+}
+
+a:visited {
+    color: rgb(255, 217, 0)
+}
+
+body {
+    top: 0;
+    left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Header and Navbar style with flex*/
+.flex-nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(-60deg, rgba(255, 255, 255, 1) 0%, rgba(156, 144, 130, 0.2078183634897296) 100%),
+        url("imges/nav-background.jpg");
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    margin: 5px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+nav {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--my-txt-color, orange);
+}
+
+/* Main introduction with grid layout and Form style with flex layout */
+
+.flex-info {
+    display: grid;
+    grid-template-areas:"title form"
+                         "info form"
+                        
+                        "button button"
+                        "video video";
+  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--my-txt-color, orange);
+    background-color: var(--my-bg-color, white);
+    
+}
+.title {
+    grid-area: title;
+    color: rgb(255, 115, 0);
+    padding-top: 50px;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px var(--my-txt-color);
+}
+#form{
+    grid-area:form;
+    display: flex;
+    flex-direction: column;
+    margin-right:5px;
+    padding:2px;
+    align-items: center;
+    border:2px solid gray;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5%;
+    background-color: blanchedalmond;
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1;
+}
+#email, textarea{
+    width: 100%;
+}
+textarea{
+    height:100px;
+    overflow:auto ;
+}
+.info{
+    grid-area:info;
+}
+.btn{
+    grid-area:button;
+}
+.showVideo{
+    grid-area: video;
+}
+
+
+#submit{
+    width: 100%;
+    height:40px;
+    background-color: aqua;
+    color:hotpink;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 10px;
+}
+
+
+/* Product Details and Prices Part with grid layout */
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-price {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 10px;
+    justify-content: center;
+    color: var(--my-txt-color, orange);
+}
+
+.grid-price>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Contact  section, End of the page*/
+footer{
+    text-align: center;
+    color: var(--my-txt-color, black);
+}
+
+/* Whole page Resposive Web Setting */
+
+  /* change layout */
+  @media screen and (max-width: 767px) {
+    .flex-nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+      
+    .flex-info{
+        display: grid;
+        grid-template-areas:
+        "title"
+        "info"
+        "button"
+        "video"
+        "form";
+    }
+
+    .grid-price{
+        display: grid;
+        grid-template-columns: auto;
+  
+    }
+
+    /* reduce sizing */
+    img{
+        width: 30px;
+        height:30px;
+    }
+    textarea{
+    height:auto;
+    }
+    body{
+      font-size: 10px;
+    }
+    h2, .title{
+      font-size: 20px;
+    }
+ 
+
+}
