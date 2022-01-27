@@ -15,13 +15,13 @@
 <body>
 
     <!-- this is navigation part -->
-<header id="header" class="flex-nav">
+    <header id="header" class="flex-nav">
         <div class="logo">
-            <img id="header-img" src="./imges/Logo.jpg" alt="logo" />
+            <img id="header-img" src="https://github.com/Jo-Zh/Product-Landing-Page/raw/main/img/Logo.jpg" alt="logo" />
         </div>
 
         <nav id="nav-bar">
-            <a class="nav-link" href="#info"><strong>Product information</strong></a>
+            <a class="nav-link" href="#info"><strong>Product-information</strong></a>
             <a class="nav-link" href="#price"><strong>Price</strong></a>
             <a class="nav-link" href="#contact"><strong>Contact</strong></a>
         </nav>
@@ -29,14 +29,25 @@
     </header>
 
     <!-- this is product introduction part -->
-    <div class="flex-info">
+    <main class="flex-info">
         <h1 class="title">title</h1>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            Get your favorite Recipe by
-            <input name="email" id="email" type="email" placeholder="enter email here..." />
-            Any comments:
-            <textarea placeholder="1..."></textarea>
-            <input id="submit" type="submit" value="Get Recipe" />
+        <form id="form" action="http://localhost:7000/posts" method="POST">
+            <label for="select">Select a Package to inquire</label>
+            <select name="selection" id="selection">
+                <option value="" selected>--</option>
+                <option value="Package A">Package A</option>
+                <option value="Package B">Package B</option>
+                <option value="Package C">Package C</option>
+            </select>
+            <input type="hidden" id="submitpackage" name="submitpackage">
+            <label for="email">Your recipe will send through</label>
+            <input name="email" id="email" type="email" placeholder="enter email here..." required />
+            <label for="comments">Any comments:</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <div style="display: inline;">
+                <input type="reset" value="Reset" />
+                <input id="submit" type="submit" value="Get Recipe" />
+            </div>
         </form>
         <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ex iusto repellat suscipit!
             Ipsa nobis aut inventore sapiente reiciendis consequuntur commodi quidem eos harum dolorum quasi, optio
@@ -49,26 +60,36 @@
                 allowfullscreen></iframe>
         </div>
 
-    </div>
+    </main>
 
     <!-- products with price displayed here -->
-    <h2>Product Packages</h2>
-    <ul id="price" class="grid-price">
+    <hr>
+    <h2 id="price">Product Packages</h2>
+
+    <ul id="Product-Packages" class="grid-price">
         <li>
-            <img src="./imges/snowman-02.jpg" alt="cupcake" />
+            <img src="https://github.com/Jo-Zh/Jo-Zh.github.io/raw/main/imagines/merrychristmas.jpg" alt="cupcake" />
+            <h6 class="pack-title">Package A</h6>
             <p>price: <strong>2.00AUD</strong><br>
                 Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" class="order">Choose</button>
 
         </li>
         <li>
-            <img src="./imges/snowman-02.jpg" alt="cupcake" />
+
+            <img src="https://github.com/Jo-Zh/Jo-Zh.github.io/raw/main/imagines/reactFood.jpeg" alt="cupcake" />
+            <h6 class="pack-title">Package B</h6>
             <p>price: <strong>5.00AUD</strong><br>
                 Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" class="order">Choose</button>
         </li>
         <li>
-            <img src="./imges/snowman-02.jpg" alt="cupcake" />
+
+            <img src="https://github.com/Jo-Zh/Product-Landing-Page/raw/main/img/snowman-02.jpg" alt="cupcake" />
+            <h6 class="pack-title">Package C</h6>
             <p>price: <strong>10.00AUD</strong><br>
                 Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" class="order">Choose</button>
         </li>
 
     </ul>
@@ -81,6 +102,7 @@
 
         <a href="#" class="fa fa-facebook">facebook</a><br>
         <a href="#" class="fa fa-twitter">twitter</a>
+        <div> 2022 Designed and coded by Joanna Zhong </div>
     </footer>
 
     <!--End of page  -->
@@ -97,6 +119,10 @@
         });
     </script>
     <!--jQuery end  -->
+
+    <!--import Js here--->
+    <script src="order.js"></script>
+
 
 </body>
 

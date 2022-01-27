@@ -1,43 +1,43 @@
-/* custimized setting for the whole style*/
+/* custimized setting for the whole style----------------------*/
+*{
+    margin:0;
+}
 :root {
     --my-txt-color: #953f0c;
     --my-bg-color: rgba(227, 76, 240, 0.4);
+    font-size: 20px;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 a:hover {
     background: rgb(255, 217, 0, 0.5);
 }
 
-a:link {
-    color: gold;
+a:link, 
+a:visited{
+    color: rgb(255, 217, 0);
 }
 
-a:visited {
-    color: rgb(255, 217, 0)
-}
 
-body {
-    top: 0;
-    left: 0;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: 25px;
-}
 
-/* Header and Navbar style with flex*/
+/* Header and Navbar style with flex--------------------------------*/
 .flex-nav {
     display: flex;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-image: linear-gradient(-60deg, rgba(255, 255, 255, 1) 0%, rgba(156, 144, 130, 0.2078183634897296) 100%),
-        url("imges/nav-background.jpg");
+    background-image: linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(156, 144, 130, 0.3) 60%),
+        url("https://github.com/Jo-Zh/Product-Landing-Page/raw/main/img/nav-background.jpg");
     background-position: center;
     background-size: cover;
     justify-content: space-between;
-    margin: 5px;
     box-shadow: 2px 2px 2px black;
+    font-size: 1.5rem;
 
 }
 
@@ -50,29 +50,28 @@ nav {
     color: var(--my-txt-color, orange);
 }
 
-/* Main introduction with grid layout and Form style with flex layout */
+/* Main introduction with grid layout and Form style with flex layout--*/
 
 .flex-info {
     display: grid;
     grid-template-areas:"title form"
-                         "info form"
-                        
+                        "info form"
                         "button button"
                         "video video";
-  
     justify-content: center;
     align-items: center;
-    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding:10px;
     height: 100vh;
     color: var(--my-txt-color, orange);
     background-color: var(--my-bg-color, white);
-    
 }
 .title {
     grid-area: title;
     color: rgb(255, 115, 0);
     padding-top: 50px;
-    font-size: 50px;
+    font-size: 3rem;
     text-shadow: 2px 2px 2px var(--my-txt-color);
 }
 #form{
@@ -90,11 +89,16 @@ nav {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     z-index: 1;
 }
+label, option{
+    font-size: 1rem;
+    font-weight: bold;
+    color: green;
+}
 #email, textarea{
     width: 100%;
 }
 textarea{
-    height:100px;
+    height:5rem;
     overflow:auto ;
 }
 .info{
@@ -107,28 +111,36 @@ textarea{
     grid-area: video;
 }
 
-
 #submit{
-    width: 100%;
-    height:40px;
+    display: inline-block;
+    height:2.5rem;
     background-color: aqua;
     color:hotpink;
     box-shadow: 2px 2px 2px grey;
     border-radius: 10px;
+    
 }
 
-
-/* Product Details and Prices Part with grid layout */
+input[type='reset']{
+    display: inline-block;
+    background: transparent;
+    border:0;
+    text-decoration: underline;
+    cursor: pointer;
+    color:green;
+}
+/* Product Details and Prices Part with grid layout ------*/
 h2 {
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
-}
+  text-shadow: 5px 5px 5px var(--my-txt-color, orange)
 
+}
 .grid-price {
     list-style: none;
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-gap: 10px;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-gap: 5em;
     justify-content: center;
     color: var(--my-txt-color, orange);
 }
@@ -137,16 +149,34 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  box-shadow: 5px 5px 5px var(--my-txt-color, orange)
 
 }
-
-/* Contact  section, End of the page*/
+li>img{
+  width:100%;
+  height:15rem;
+}
+.order{
+    background: transparent;
+    border:0;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--my-txt-color, orange);
+}
+/* Contact  section, End of the page-------------------------*/
 footer{
     text-align: center;
     color: var(--my-txt-color, black);
 }
+footer > div:before{
+  content:"\00A9";
+}
+footer >div{
+  color: var(--my-txt-color);
+  font-size: 0.6rem
+}
 
-/* Whole page Resposive Web Setting */
+/* Whole page Resposive Web Setting-------------------------- */
 
   /* change layout */
   @media screen and (max-width: 767px) {
@@ -173,19 +203,17 @@ footer{
     }
 
     /* reduce sizing */
-    img{
+    :root{
+      font-size: 8px;
+    }
+    .logo > img{
         width: 30px;
         height:30px;
     }
-    textarea{
-    height:auto;
+   
+    iframe{
+      width: 80%;
+      margin:auto;
     }
-    body{
-      font-size: 10px;
-    }
-    h2, .title{
-      font-size: 20px;
-    }
- 
 
 }
