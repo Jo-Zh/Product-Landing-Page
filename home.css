@@ -49,6 +49,12 @@ nav {
     align-items: center;
     color: var(--my-txt-color, orange);
 }
+nav >ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
 /* Main introduction with grid layout and Form style with flex layout--*/
 
@@ -180,12 +186,13 @@ footer >div{
 
   /* change layout */
   @media screen and (max-width: 767px) {
-    .flex-nav{
+    .flex-nav,
+    nav > ul{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-      
+   
     .flex-info{
         display: grid;
         grid-template-areas:
