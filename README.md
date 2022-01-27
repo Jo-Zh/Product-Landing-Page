@@ -5,6 +5,6 @@ This is one of freecodecamp certification projects.
 ##Modification log:
 
 1 first completed on, basic homepage for "landing cookie recipes"
-2 updated on 28 Dec 2018: improved Layout with flex and grid design, added more img elements and used jQuery to control display.
+2 updating the form function with adding submit information in js 
 
 
