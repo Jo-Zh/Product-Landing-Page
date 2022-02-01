@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" viewBox="0 0 100 100" style="stroke: rgb(255, 255, 255); stroke-width:2">
+    <g>
+    <rect x="0" y="49" width="75" height="16" style="fill:rgba(250, 65, 65,0.8)"></rect>
+    <rect x="0" y="33" width="75" height="16" style="fill:rgba(255, 204, 94, 0.8)"></rect>
+    <rect x="0" y="17" width="75" height="16" style="fill:rgba(65, 250, 225, 0.8)"></rect>
+    <rect x="0" y="1" width="75" height="16" style="fill:rgba(250, 65, 250, 0.8)"></rect>
+    <path stroke-width="2" fill="rgb(240, 234, 234)" d="M0,0 C5,5 10,0 15,5 T20,0 C25,5 30,0 35,5 T40,0 C45,8 52,0 55,0 T60,5 75,0" stroke="rgba(256, 256, 256, 0.8);"></path>
+    </g>
+</svg>

@@ -5,6 +5,7 @@
 :root {
     --my-txt-color: #953f0c;
     --my-bg-color: rgba(227, 76, 240, 0.4);
+    --my-link-color:#3fc3d4;
     font-size: 20px;
 }
 body {
@@ -19,7 +20,7 @@ a:hover {
 
 a:link, 
 a:visited{
-    color: rgb(255, 217, 0);
+    color: var(--my-link-color, rgb(255, 217, 0));
 }
 
 
@@ -31,10 +32,10 @@ a:visited{
     position: fixed;
     top: 0;
     left: 0;
-    background-image: linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(156, 144, 130, 0.3) 60%),
-        url("https://github.com/Jo-Zh/Product-Landing-Page/raw/main/img/nav-background.jpg");
-    background-position: center;
-    background-size: cover;
+    background-image: linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(236, 28, 226, 0.3) 60%),
+        url("img/nav-background.png");
+    
+    background-repeat: repeat;
     justify-content: space-between;
     box-shadow: 2px 2px 2px black;
     font-size: 1.5rem;
@@ -55,7 +56,10 @@ nav >ul{
     padding: 0;
     display: flex;
 }
-
+#header-img{
+    width: 100px;
+    height: 100px;
+}
 /* Main introduction with grid layout and Form style with flex layout--*/
 
 .flex-info {
@@ -192,7 +196,9 @@ footer >div{
         flex-direction: column;
         flex-wrap: wrap;
     }
-   
+    .logo{
+        display: none;
+    }
     .flex-info{
         display: grid;
         grid-template-areas:
