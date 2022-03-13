@@ -123,6 +123,7 @@ textarea {
 }
 .showVideo {
   grid-area: video;
+  min-height: fit-content;
 }
 
 #submit {
@@ -143,7 +144,8 @@ input[type="reset"] {
   color: green;
 }
 /* Product Details and Prices Part with grid layout ------*/
-h2 {
+#price {
+  margin-top: 150px;
   font-size: 2rem;
   text-align: center;
   text-shadow: 5px 5px 5px var(--my-txt-color, orange);
