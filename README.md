@@ -1,10 +1,23 @@
 # Product-Landing-Page
-This is one of freecodecamp certification projects.
-![Image](https://github.com/Jo-Zh/Product-Landing-Page/raw/main/img/product%20landing%20page.jpg)
+This was one of freecodecamp certification projects. Now I am trying to add more functions.
+![Image]
+First of all, turning it to server side rendering react project.
+
+#
+#
+#
+#
+#
+
+
+
+
+
 
 ##Modification log:
 
 1 first completed on, basic homepage for "landing cookie recipes"
 2 updating the form function with adding submit information in js 
+3 set express, babel , webpack env, ready to convert it to server side rendering react. Yet, I met an issue about image loading into React component and .css link to index.html. They are not working...
 
 
