@@ -1,5 +1,6 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
+// import img from "./file.png";
 import express from "express";
 import { readFileSync } from "fs";
 import App from "../client/App";

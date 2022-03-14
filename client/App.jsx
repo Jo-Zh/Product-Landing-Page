@@ -1,13 +1,16 @@
 import React from "react";
 import MyForm from "./MyForm";
-// import "./app.css";
+
+import logo from "./cakelogo.png";
+import applepie from "./apple-pie.jpg";
+
 const App = () => {
   return (
     <div>
       {/* <!-- this is navigation part --> */}
       <header id="header" className="flex-nav">
         <div className="logo">
-          <img id="header-img" src="../img/cakelogo.svg" alt="logo" />
+          <img id="header-img" src={logo} alt="logo" />
         </div>
 
         <nav id="nav-bar">
@@ -57,7 +60,7 @@ const App = () => {
                 allowfullscreen></iframe>
         </div> -->} */}
       </main>
-      <img src="../img/apple-pie.jpg" alt="apple pie" />
+      <img src={applepie} alt="apple pie" />
       <h1>This is my Landing page in React</h1>;
     </div>
   );
