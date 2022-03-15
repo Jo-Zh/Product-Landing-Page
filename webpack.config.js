@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: [/\.jsx?$/, /\.(jpe?g|png|gif|svg)$/i],
+        test: [/\.(jsx?|png|jpg)$/],
         exclude: /(node_modules)/,
         use: [
           {
@@ -24,11 +24,18 @@ module.exports = {
               presets: ["@babel/preset-env", "@babel/preset-react"],
             },
           },
-          {
-            loader: "file-loader",
-          },
+          // {
+          //   loader: "url-loader",
+          //   options: {
+          //     limit: 8192,
+          //   },
+          // },
         ],
       },
+      // {
+      //   test: /\.(png|jpg|jpeg|gif)$/i,
+      //   type: "asset/resource",
+      // },
     ],
   },
 };
